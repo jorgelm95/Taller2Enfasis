@@ -1,0 +1,19 @@
+﻿@model SistemaMusica.Repositorio.Usuario
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm(actionName: "validarUsuario", controllerName: "Usuario", method:FormMethod.Get))
+{
+    <div>Usuario </div>
+    <div>@Html.TextBoxFor(m => m.Username)</div>
+    <div>Contraseña </div>
+    <div>@Html.PasswordFor(m => m.Password)</div>
+    <div><input type="submit" value="loguear" /></div>
+    <div class="alert alert-danger">@ViewBag.MensajeError</div>
+}
+

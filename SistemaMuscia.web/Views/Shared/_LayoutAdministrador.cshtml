@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body style="padding-top:0px;">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-6 column">
+                    </div>
+                    <div class="col-md-6 column">
+                        <ul class="nav nav-tabs">
+                            <li>
+                                @Html.ActionLink("Inicio", "Index", "Home")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Entrar", "Login", "Usuario")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Panel Administrativo", "Index", "Artista")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Contactenos", "Contactenos")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active">@Html.ActionLink("Registrar Artistas", "GuardarArtista", "Artista")</li>
+                            <li class="active">@Html.ActionLink("Registrar Canciones", "GuardarCancion", "Cancion")</li>
+                            <li class="active">@Html.ActionLink("Registrar Discos", "GuardarDisco", "Disco")</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 column">
+                        <div>
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <hr />
+                <div class="row clearfix">
+                    <div class="col-md-6 column">
+                        <p>
+                            Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+                        </p>
+                    </div>
+                    <div class="col-md-6 column">
+                        <div class="row clearfix">
+                            <div class="col-md-4 column">
+                                <img alt="140x140" src="http://lorempixel.com/140/140/">
+                            </div>
+                            <div class="col-md-4 column">
+                                <img alt="140x140" src="http://lorempixel.com/140/140/">
+                            </div>
+                            <div class="col-md-4 column">
+                                <img alt="140x140" src="http://lorempixel.com/140/140/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+    </div>
+
+</body>
+</html>
